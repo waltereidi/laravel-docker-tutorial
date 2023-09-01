@@ -22,9 +22,11 @@ Agora voce estára dentro do container do docker, o laravel-docker é o nome da 
 Instale o laravel dentro deste terminal como de costume : <strong>composer create-project laravel-app </strong> </br> 
 Certifique-se de que o arquivo env. foi configurado corretamente : <strong> Senha root , usuario root , host: mysql</strong><br>
 Isto mesmo , host : <strong>mysql</strong> , é o nome do host que foi dado ao docker-compose.yml durante a configuração</br>
-Execute os comandos <strong>php artisan migrate</strong> e por fim <strong> php artisan serve </strong> 
+Execute os comandos <strong>php artisan migrate</strong> e por fim <strong> php artisan serve --host 0.0.0.0 </strong> 
 Se voce utilizou a mesma configuração deste repositório , pode acessar o laravel através de seu navegador no pc </br>
-na porta <strong>9000 </strong> e o phpadmin na porta <strong>9001</strong> </br></br>
+na porta <strong>9000 </strong> e o phpadmin na porta <strong>9001</strong> ,não se esqueça de rodar o serve com o --host 0.0.0.0 </br>
+é essencial para o docker.
+</br></br>
 
 Dicas : na configuração de portas para os aplicativos o lado esquerdo é a porta de seu pc e a direita é a porta do docker.</br>
 é possivel automatizar os comandos do docker atravéz do Makefile , deve-se criar uma lista comandos que serão executados </br>
